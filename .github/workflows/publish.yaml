@@ -65,5 +65,5 @@ jobs:
           version: pnpm changeset-version
           publish: pnpm changeset-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
