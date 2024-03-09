@@ -13,7 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions: 
       contents: write
-      packages: write
+      pull-requests: write
+      issues: write
+      checks: read
+      actions: write
 
     steps:
       - name: "✨ Checkout code"
@@ -56,7 +59,7 @@ jobs:
 
       - name: "🚀 Create release pr and publish to npm"
         id: changesets
-        uses: changesets/action@v1
+        uses: changesets/action@v1.4.5
         with:
           title: '🚀 Release ${{env.PACKAGE_NAME}}@${{env.VERSION}}'
           commit: '🚀 Release ${{env.PACKAGE_NAME}}@${{env.VERSION}}'
