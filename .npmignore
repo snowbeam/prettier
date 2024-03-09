@@ -1,0 +1,9 @@
+node_modules
+src
+__tests__
+.npmrc
+.pnpm
+.pnpm-store
+.gitignore
+coverage
+pnpm-lock.yaml
